@@ -105,7 +105,11 @@ public class RealInterval {
 	}
 	@Override
 	public boolean equals(Object o) {
-		return i.equals(o);
+	    if (this == o) return true;
+	    if ( !(o instanceof RealInterval) ) {
+    		return i.equals(o); // what if @o@ is an instance of DoubleInterval?
+	    }
+		return i.equals( ((RealInterval)o).i );
 	}
 	
 	
