@@ -103,16 +103,17 @@ public class RealInterval {
 	public String toString() {
 		return i.toString();
 	}
+
 	@Override
 	public boolean equals(Object o) {
-	    if (this == o) return true;
-	    if ( !(o instanceof RealInterval) ) {
-    		return i.equals(o); // what if @o@ is an instance of DoubleInterval?
-	    }
-		return i.equals( ((RealInterval)o).i );
+		return o instanceof RealInterval && i.equals(((RealInterval) o).i);
 	}
-	
-	
+
+	@Override
+	public int hashCode() {
+		return i.hashCode();
+	}
+
 	// not standard
 	public double wid() {
 		return i.doubleWid();

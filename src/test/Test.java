@@ -1,7 +1,7 @@
 package test;
 
-//import net.sourceforge.interval.ia_math.IAMath;
-//import net.sourceforge.interval.ia_math.RealInterval;
+import net.sourceforge.interval.ia_math.IAMath;
+import net.sourceforge.interval.ia_math.RealInterval;
 
 /**
  * @author nvpanov
@@ -19,15 +19,13 @@ public class Test {
 		System.out.println("Distributed under GPL license.");
 		System.out.println("(c) Nikita Panov");
 		
-/*		
 		// TODO: Add real tests instead of this
 		RealInterval i = new RealInterval(-1, 1);
 		RealInterval r = IAMath.add(i, 2);
 		RealInterval i1 = new RealInterval(1, 3);
 		if (!r.equals(i1)) {
 			System.out.println("\nSanity check FAILD! Please do not use this version.");
-		}
-*/		
+		}		
 	}
 
 }
